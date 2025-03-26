@@ -222,6 +222,7 @@ services:
   mysql:
     image: mysql:8.0
     container_name: mysql
+    command: --local-infile=1  # Bật local_infile
     volumes:
       - mysql_h:/var/lib/mysql
       - ./dataset:/tmp/dataset  #mount volume dataset
